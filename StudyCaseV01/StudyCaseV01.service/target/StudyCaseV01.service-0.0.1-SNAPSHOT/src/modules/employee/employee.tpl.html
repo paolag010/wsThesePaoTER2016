@@ -1,0 +1,38 @@
+<toolbar name="employee" display-name="Employee" actions="employeeCtrl.globalActions"></toolbar>
+<div ng-show="employeeCtrl.error.show" ng-message="show" class="alert alert-danger" role="alert">
+    <strong>Error!</strong> {{employeeCtrl.error.msg}}
+</div>
+<div ng-hide="employeeCtrl.editMode">
+    <list-records
+        edit-record="employeeCtrl.editRecord(record)"
+        delete-record="employeeCtrl.deleteRecord(record)"
+        model="model"
+        records="records">
+    </list-records>
+    <pagination total-items="employeeCtrl.totalItems" ng-model="employeeCtrl.currentPage" ng-change="employeeCtrl.pageChanged()" items-per-page="employeeCtrl.itemsPerPage" max-size="employeeCtrl.maxSize" class="pagination-sm" boundary-links="true" rotate="false"></pagination>
+</div>
+<div ng-show="employeeCtrl.editMode">
+    <form name="employeeForm" role="form">
+        <input id="id" class="form-control" type="hidden" ng-model="currentRecord.id"/>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input id="name" class="form-control" type="text" ng-model="currentRecord.name"/>
+        </div>
+        <div class="form-group">
+            <label for="salary">Salary</label>
+            <input id="salary" class="form-control" type="number" ng-model="currentRecord.salary"/>
+        </div>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <input id="address" class="form-control" type="text" ng-model="currentRecord.address"/>
+        </div>
+        <div class="form-group">
+            <label for="company">Company</label>
+            <select id="company" class="form-control" ng-options="company.id as company.name for company in companyRecords" ng-model="currentRecord.company"></select>
+        </div>
+        <div class="form-group">
+            <label for="department">Department</label>
+            <select id="department" class="form-control" ng-options="department.id as department.name for department in departmentRecords" ng-model="currentRecord.department"></select>
+        </div>
+    </form>
+</div>

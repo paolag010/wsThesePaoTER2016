@@ -1,0 +1,15 @@
+fr\unigrenoble\research\ter\StudyCaseGroup\logic\ejb\EmployeeLogic.class
+fr\unigrenoble\research\ter\StudyCaseGroup\logic\ejb\DepartmentLogic.class
+fr\unigrenoble\research\ter\StudyCaseGroup\logic\converter\CompanyConverter.class
+fr\unigrenoble\research\ter\StudyCaseGroup\logic\dto\CompanyDTO.class
+fr\unigrenoble\research\ter\StudyCaseGroup\logic\converter\DepartmentConverter.class
+fr\unigrenoble\research\ter\StudyCaseGroup\logic\ejb\CompanyLogic.class
+fr\unigrenoble\research\ter\StudyCaseGroup\logic\api\IDepartmentLogic.class
+fr\unigrenoble\research\ter\StudyCaseGroup\logic\api\IEmployeeLogic.class
+fr\unigrenoble\research\ter\StudyCaseGroup\logic\dto\DepartmentDTO.class
+fr\unigrenoble\research\ter\StudyCaseGroup\logic\converter\EmployeeConverter.class
+fr\unigrenoble\research\ter\StudyCaseGroup\logic\entity\CompanyEntity.class
+fr\unigrenoble\research\ter\StudyCaseGroup\logic\entity\DepartmentEntity.class
+fr\unigrenoble\research\ter\StudyCaseGroup\logic\entity\EmployeeEntity.class
+fr\unigrenoble\research\ter\StudyCaseGroup\logic\dto\EmployeeDTO.class
+fr\unigrenoble\research\ter\StudyCaseGroup\logic\api\ICompanyLogic.class

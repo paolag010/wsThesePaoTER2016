@@ -1,0 +1,26 @@
+<toolbar name="department" display-name="Department" actions="departmentCtrl.globalActions"></toolbar>
+<div ng-show="departmentCtrl.error.show" ng-message="show" class="alert alert-danger" role="alert">
+    <strong>Error!</strong> {{departmentCtrl.error.msg}}
+</div>
+<div ng-hide="departmentCtrl.editMode">
+    <list-records
+        edit-record="departmentCtrl.editRecord(record)"
+        delete-record="departmentCtrl.deleteRecord(record)"
+        model="model"
+        records="records">
+    </list-records>
+    <pagination total-items="departmentCtrl.totalItems" ng-model="departmentCtrl.currentPage" ng-change="departmentCtrl.pageChanged()" items-per-page="departmentCtrl.itemsPerPage" max-size="departmentCtrl.maxSize" class="pagination-sm" boundary-links="true" rotate="false"></pagination>
+</div>
+<div ng-show="departmentCtrl.editMode">
+    <form name="departmentForm" role="form">
+        <input id="id" class="form-control" type="hidden" ng-model="currentRecord.id"/>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input id="name" class="form-control" type="text" ng-model="currentRecord.name"/>
+        </div>
+        <div class="form-group">
+            <label for="company">Company</label>
+            <select id="company" class="form-control" ng-options="company.id as company.name for company in companyRecords" ng-model="currentRecord.company"></select>
+        </div>
+    </form>
+</div>

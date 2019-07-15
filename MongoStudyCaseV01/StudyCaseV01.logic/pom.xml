@@ -1,0 +1,53 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>fr.unigrenoble.research.ter.StudyCaseGroup</groupId>
+    <artifactId>StudyCaseV01.logic</artifactId>
+    <name>StudyCaseV01.logic</name>
+    <version>0.0.1</version>
+    <dependencies>
+        <!-- embedded glassfish 3.1.2 --> 
+        <dependency>
+            <groupId>org.glassfish.main.extras</groupId>
+            <artifactId>glassfish-embedded-all</artifactId>
+            <version>4.0</version> 
+            <scope>test</scope> 
+        </dependency>
+       
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+            <version>7.0</version>
+        </dependency>
+     
+        <!-- Mongo java driver -->
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongo-java-driver</artifactId>
+            <version>2.11.3</version>
+        </dependency>   
+        <!-- Eclipselink  --> 
+        <dependency>
+            <groupId>org.eclipse.persistence</groupId>
+            <artifactId>eclipselink</artifactId>
+            <version>2.4.2-SNAPSHOT</version>
+        </dependency>
+        <!-- Eclipselink nosql -->    
+        <dependency>
+            <groupId>org.eclipse.persistence</groupId>
+            <artifactId>org.eclipse.persistence.nosql</artifactId>
+            <version>2.4.2-SNAPSHOT</version>
+        </dependency> 
+        <dependency>
+            <groupId>javax.resource</groupId>
+            <artifactId>connector-api</artifactId>
+            <version>1.5</version>
+        </dependency>
+    </dependencies>   
+    <repositories>
+        <repository>
+            <id>EclipseLink Repo</id>
+            <name>EclipseLink Repository</name>
+            <url>http://download.eclipse.org/rt/eclipselink/maven.repo</url>
+        </repository>
+    </repositories> 
+</project>

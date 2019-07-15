@@ -1,0 +1,22 @@
+<toolbar name="company" display-name="Company" actions="companyCtrl.globalActions"></toolbar>
+<div ng-show="companyCtrl.error.show" ng-message="show" class="alert alert-danger" role="alert">
+    <strong>Error!</strong> {{companyCtrl.error.msg}}
+</div>
+<div ng-hide="companyCtrl.editMode">
+    <list-records
+        edit-record="companyCtrl.editRecord(record)"
+        delete-record="companyCtrl.deleteRecord(record)"
+        model="model"
+        records="records">
+    </list-records>
+    <pagination total-items="companyCtrl.totalItems" ng-model="companyCtrl.currentPage" ng-change="companyCtrl.pageChanged()" items-per-page="companyCtrl.itemsPerPage" max-size="companyCtrl.maxSize" class="pagination-sm" boundary-links="true" rotate="false"></pagination>
+</div>
+<div ng-show="companyCtrl.editMode">
+    <form name="companyForm" role="form">
+        <input id="id" class="form-control" type="hidden" ng-model="currentRecord.id"/>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input id="name" name="name" class="form-control" type="text" ng-model="currentRecord.name"/>
+        </div>
+    </form>
+</div>
